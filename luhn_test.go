@@ -1,4 +1,4 @@
-package gocard
+package card
 
 import "testing"
 

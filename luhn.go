@@ -1,4 +1,4 @@
-package gocard
+package card
 
 // CalculateLuhn return the check number
 func CalculateLuhn(digits []int) int {
