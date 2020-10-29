@@ -88,7 +88,7 @@ func NewCard(number string, cvv string, month int, year int, cardHolder string) 
 		digits = append(digits, d)
 	}
 
-	if !Valid(digits) {
+	if !valid(digits) {
 		return nil, fmt.Errorf("Card number is not valid")
 	}
 

@@ -1,7 +1,7 @@
 package card
 
 // CalculateLuhn return the check number
-func CalculateLuhn(digits []int) int {
+func calculateLuhn(digits []int) int {
 	checkNumber := checksum(digits)
 
 	if checkNumber == 0 {
@@ -11,7 +11,7 @@ func CalculateLuhn(digits []int) int {
 }
 
 // Valid check number is valid or not based on Luhn algorithm
-func Valid(digits []int) bool {
+func valid(digits []int) bool {
 	return (digits[len(digits)-1]+checksum(digits))%10 == 0
 }
 
