@@ -1,4 +1,5 @@
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/anaximen/go-card)](https://goreportcard.com/report/github.com/anaximen/go-card)
 # go-card 
 
 Basic credit card structure with validation using the [Luhn algorithm](http://en.wikipedia.org/wiki/Luhn_algorithm)
