@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// Card - credit card structure
 type Card struct {
 	number        []int
 	cvv           string
@@ -16,10 +17,14 @@ type Card struct {
 	cardHolder    string
 }
 
+//Number - return a number of credit card
 func (c *Card) Number() string {
 	return strings.Trim(strings.Join(strings.Fields(fmt.Sprint(c.number)), ""), "[]")
 }
 
+//MaskedNumber - return a masked credit card number like 427615xxxxxx1234
+//@headlen - length of first series
+//@taillen - length of last series
 func (c *Card) MaskedNumber(headlen int, taillen int) string {
 
 	hl := headlen
@@ -40,22 +45,27 @@ func (c *Card) MaskedNumber(headlen int, taillen int) string {
 	return maskednumber
 }
 
+//Cvv - return a cvv of credit card
 func (c *Card) Cvv() string {
 	return c.cvv
 }
 
+//Month - return expiration month of credit card
 func (c *Card) Month() int {
 	return c.month
 }
 
+//Year - return expiration year of credit card
 func (c *Card) Year() int {
 	return c.year
 }
 
+//CardHolder - return cardholder of credit card
 func (c *Card) CardHolder() string {
 	return c.cardHolder
 }
 
+//Expired - return true if card is expired and false if not
 func (c *Card) Expired() bool {
 
 	now := time.Now()
@@ -65,11 +75,12 @@ func (c *Card) Expired() bool {
 
 }
 
-// Company holds a short and long names of who has issued the credit card
+//PaymentSystem holds a short and long names of who has issued the credit card
 type PaymentSystem struct {
 	Short, Full string
 }
 
+//NewCard - create a new credit card object
 func NewCard(number string, cvv string, month int, year int, cardHolder string) (*Card, error) {
 	length := len(number)
 

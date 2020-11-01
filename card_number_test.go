@@ -12,12 +12,12 @@ func TestNewCardNumber(t *testing.T) {
 	tests := []struct {
 		name    string
 		args    args
-		want    *CardNumber
+		want    *Number
 		wantErr bool
 	}{
 		{name: "VISA valid test",
 			args:    args{number: "4716339239466898"},
-			want:    &CardNumber{number: "4716339239466898"},
+			want:    &Number{number: "4716339239466898"},
 			wantErr: false,
 		},
 		{name: "VISA invalid number charactertest",

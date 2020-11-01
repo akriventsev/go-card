@@ -5,15 +5,17 @@ import (
 	"strconv"
 )
 
-type CardNumber struct {
+//Number - holds a credit card number
+type Number struct {
 	number string
 }
 
-func (c *CardNumber) String() string {
+func (c *Number) String() string {
 	return c.number
 }
 
-func NewCardNumber(number string) (*CardNumber, error) {
+//NewCardNumber - return a new Number object
+func NewCardNumber(number string) (*Number, error) {
 	digits := []int{}
 	for i := 0; i < len(number); i++ {
 		d, err := strconv.Atoi(string(number[i]))
@@ -26,5 +28,5 @@ func NewCardNumber(number string) (*CardNumber, error) {
 	if !valid(digits) {
 		return nil, fmt.Errorf("Card number is not valid")
 	}
-	return &CardNumber{number: number}, nil
+	return &Number{number: number}, nil
 }
