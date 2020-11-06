@@ -8,7 +8,7 @@ Basic credit card structure with validation using the [Luhn algorithm](http://en
 ## Installation
 
 ```bash
-go get github.com/anaximen/go-card
+go get github.com/akriventsev/go-card
 ```
 
 ## Quick Start
