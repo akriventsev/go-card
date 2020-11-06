@@ -1,5 +1,5 @@
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/anaximen/go-card)](https://goreportcard.com/report/github.com/anaximen/go-card)
+[![Go Report Card](https://goreportcard.com/badge/github.com/akriventsev/go-card)](https://goreportcard.com/report/github.com/akriventsev/go-card)
 # go-card 
 
 Basic credit card structure with validation using the [Luhn algorithm](http://en.wikipedia.org/wiki/Luhn_algorithm)
@@ -8,7 +8,7 @@ Basic credit card structure with validation using the [Luhn algorithm](http://en
 ## Installation
 
 ```bash
-go get github.com/anaximen/go-card
+go get github.com/akriventsev/go-card
 ```
 
 ## Quick Start
